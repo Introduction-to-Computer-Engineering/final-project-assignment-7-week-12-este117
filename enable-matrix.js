@@ -1,14 +1,7 @@
 pins.analogWritePin(AnalogPin.P8, 0) 8 12 16
 pins.analogWritePin(AnalogPin.P12, 0)
 pins.analogWritePin(AnalogPin.P9, 0)
-basic.forever(() => {
-    basic.showAnimation(`
-# . . . . # # . . . # # # . . # # # # . # # # # # . # # # # . . # # # . . . # # . . . . # . . . . .
-. . . . . # # . . . # # # . . # # # # . # # # # # # # # # # . . # # # . . . # # . . . . # . . . . .
-. . . . . # # . . . # # # . . # # # # . # # # # # # # # # # # # # # # . . . # # . . . . # . . . . .
-. . . . . . . . . . . . . . . # # # # . # # # # # # # # # # # # # # # # # # # # . . . . # . . . . .
-. . . . . . . . . . . . . . . . . . . . # # # # # # # # # # # # # # # # # # # # # # # # # . . . . .
-`, 100)
+basic.forever(function () {
     
     for (let index = 0; index <= 3071; index++) {
         if (index < 2046) {

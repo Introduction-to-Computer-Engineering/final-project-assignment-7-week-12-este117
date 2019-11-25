@@ -1,41 +1,52 @@
-pins.analogWritePin(AnalogPin.P8, 0) 8 12 16
-pins.analogWritePin(AnalogPin.P12, 0)
-pins.analogWritePin(AnalogPin.P9, 0)
-basic.forever(() => {
-    basic.showAnimation(`
-# . . . . # # . . . # # # . . # # # # . # # # # # . # # # # . . # # # . . . # # . . . . # . . . . .
-. . . . . # # . . . # # # . . # # # # . # # # # # # # # # # . . # # # . . . # # . . . . # . . . . .
-. . . . . # # . . . # # # . . # # # # . # # # # # # # # # # # # # # # . . . # # . . . . # . . . . .
-. . . . . . . . . . . . . . . # # # # . # # # # # # # # # # # # # # # # # # # # . . . . # . . . . .
-. . . . . . . . . . . . . . . . . . . . # # # # # # # # # # # # # # # # # # # # # # # # # . . . . .
-`, 100)
-    
-    for (let index = 0; index <= 3071; index++) {
-        if (index < 2046) {
-            if (index <= 1023) {
-                pins.analogWritePin(AnalogPin.P8, index)
-            } else {
-                pins.analogWritePin(AnalogPin.P8, 1023 - (index - 1023))
-            }
-        } else {
-            pins.analogWritePin(AnalogPin.P8, 0)
-        }
-        if (index > 1023) {
-            if (index <= 2046) {
-                pins.analogWritePin(AnalogPin.P12, index - 1023)
-            } else {
-                pins.analogWritePin(AnalogPin.P12, 1023 - (index - 2047))
-            }
-        } else {
-            pins.analogWritePin(AnalogPin.P12, 0)
-        }
-        if (index < 1023) {
-            pins.analogWritePin(AnalogPin.P16, 1022 - index)
-        } else if (index > 2048) {
-            pins.analogWritePin(AnalogPin.P16, index - 2048)
-        } else {
-            pins.analogWritePin(AnalogPin.P16, 0)
-        }
-        control.waitMicros(1000)
+let rainTime = 5000
+
+input.onButtonPressed(Button.A, function () {
+    rain()
+})
+
+function rain() {
+    while (rainTime > 0) {
+        let xCoord = Math.randomRange(0, 4)
+        led.plot(xCoord, 0)
+        basic.pause(100)
+        led.plot(xCoord, 0)
+        basic.pause(100)
+        led.plot(xCoord, 1)
+        basic.pause(100)
+        led.plot(xCoord, 1)
+        basic.pause(100)
+        led.plot(xCoord, 2)
+        basic.pause(100)
+        led.plot(xCoord, 2)
+        basic.pause(100)
+        led.plot(xCoord, 3)
+        basic.pause(100)
+        led.plot(xCoord, 3)
+        basic.pause(100)
+        led.plot(xCoord, 4)
+        basic.pause(100)
+        led.plot(xCoord, 4)
+        basic.clearScreen()
     }
+    rainTime += -500
+}
+
+led.enable(true)
+pins.digitalWritePin(DigitalPin.P8, 0)
+pins.digitalWritePin(DigitalPin.P12, 0)
+pins.digitalWritePin(DigitalPin.P16, 0)
+
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P8, 1)
+    basic.pause(300)
+    pins.digitalWritePin(DigitalPin.P12, 1)
+    basic.pause(300)
+    pins.digitalWritePin(DigitalPin.P16, 1)
+    basic.pause(300)
+    pins.digitalWritePin(DigitalPin.P8, 0)
+    basic.pause(300)
+    pins.digitalWritePin(DigitalPin.P12, 0)
+    basic.pause(300)
+    pins.digitalWritePin(DigitalPin.P16, 0)
+    basic.pause(300)
 })

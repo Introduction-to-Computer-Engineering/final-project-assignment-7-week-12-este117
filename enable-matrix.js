@@ -1,34 +1,47 @@
-pins.analogWritePin(AnalogPin.P8, 0) 8 12 16
-pins.analogWritePin(AnalogPin.P12, 0)
-pins.analogWritePin(AnalogPin.P9, 0)
-basic.forever(function () {
-    
-    for (let index = 0; index <= 3071; index++) {
-        if (index < 2046) {
-            if (index <= 1023) {
-                pins.analogWritePin(AnalogPin.P8, index)
-            } else {
-                pins.analogWritePin(AnalogPin.P8, 1023 - (index - 1023))
-            }
-        } else {
-            pins.analogWritePin(AnalogPin.P8, 0)
+class Light {
+      pin8() {
+        for (let i = 0; i <= 3071; i++) {
+            basic.clearScreen()
+            pins.analogWritePin(AnalogPin.P8, i);
+            control.waitMicros(750)
         }
-        if (index > 1023) {
-            if (index <= 2046) {
-                pins.analogWritePin(AnalogPin.P12, index - 1023)
-            } else {
-                pins.analogWritePin(AnalogPin.P12, 1023 - (index - 2047))
-            }
-        } else {
-            pins.analogWritePin(AnalogPin.P12, 0)
+        for (let i = 0; i >= 0; i--) {
+            basic.clearScreen()
+            pins.analogWritePin(AnalogPin.P8, i);
+            control.waitMicros(750)
         }
-        if (index < 1023) {
-            pins.analogWritePin(AnalogPin.P16, 1022 - index)
-        } else if (index > 2048) {
-            pins.analogWritePin(AnalogPin.P16, index - 2048)
-        } else {
-            pins.analogWritePin(AnalogPin.P16, 0)
+     }
+     pin12() {
+        for (let i = 0; i <= 3071; i++) {
+            basic.clearScreen()
+            pins.analogWritePin(AnalogPin.P12, i);
+            control.waitMicros(750)
         }
-        control.waitMicros(1000)
+        for (let i = 3071; i >= 0; i--) {
+            basic.clearScreen()
+            pins.analogWritePin(AnalogPin.P12, i)
+            control.waitMicros(750)
+        }
+     }
+     pin16() {
+        for (let i = 0; i <= 3071; i++) {
+            basic.clearScreen()
+            pins.analogWritePin(AnalogPin.P16, i);
+            control.waitMicros(750)
+        }
+        for (let i = 3071; i >= 0; i--) {
+            basic.clearScreen()
+            pins.analogWritePin(AnalogPin.P16, i);
+            control.waitMicros(750);
+       }
     }
+}
+basic.forever(function() {
+    pins.analogWritePin(AnalogPin.P8, 0);
+    pins.analogWritePin(AnalogPin.P12, 0);
+    pins.analogWritePin(AnalogPin.P16, 0);
+    let light = new Light();
+    light.pin8();
+    light.pin12();
+    light.pin16();
 })

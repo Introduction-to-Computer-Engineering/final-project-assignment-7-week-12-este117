@@ -1,6 +1,6 @@
-CPE 1040 - Introduction to Computer Engineering
+# CPE 1040 - Introduction to Computer Engineering
 
-Assignment: Final Project
+## Assignment: Final Project
 
 Part I (Week 12, Assignment #7)
 

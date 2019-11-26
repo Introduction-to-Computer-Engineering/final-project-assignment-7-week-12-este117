@@ -42,7 +42,7 @@ code: [twenty-eight.js](twenty-eight.js)
 Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is pressed). Note: Do you need an external or internal pullup resistor? Commit the JavaScript file to your assignment repository, calling it digital-in.js. Build the circuit and take a short video of its operation.
 Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. Pick a GPIO pin, configure it as digital output, and wire VCC to it. Pick a GPIO pin, configure it as analog in, and wire SIG to it. GND whould be wired to ground on the micro:bit.
 
-code: 
+code: [digital-in.js](digital-in.js)
 
 
 
@@ -56,6 +56,8 @@ Reads the sensor input in a loop with pauses to get the reading.
 It only powers the sensor when it takes a reading, by writing a 1 and then a 0 to the digital output pin. **Do not hook up the VCC on the sensor to a constant 3.3V or leave the digital pin to 1 when you are not taking a reading. This degrades the sensor quickly! **
 Maps the range of input values of the sensor (you need to measure them yourself) to the range 0-4. Use the map function. This is called calibration of the sensor. For the minimum value, take a reading with a dry sensor not touching anything; for the maximum value, take a reading with the sensor prongs dipped in shallow water. Do not immerse the whole sensor in water!
 When it takes a sensor reading, it lights up as many rows of the LED matrix as correspond to the rescaled magnitude of the reading. Commit the JavaScript file to your assignment repository, calling it manual-calibration.js. Build the circuit
+
+code: [manual-calibration.js](manual-calibration.js)
 
 
 

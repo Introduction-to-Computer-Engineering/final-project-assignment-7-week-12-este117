@@ -24,7 +24,7 @@ code: [original-guide.js](original-guide.js)
 
 Reconfigure the circuit and rewrite the program to avoid disabling the LED matrix. Choose the correct 3 pins from the micro:bit GPIO function table. Add code to demonstrate that the LED matrix is enabled. Commit the JavaScript file to your assignment repository, calling it enable-matrix.js. Build the circuit and take a short video of its operation.
 
-code: enable-matrix.js
+code: [enable-matrix.js](enable-matrix.js)
 
 
 ## Part 3: twenty-eight
@@ -32,7 +32,7 @@ code: enable-matrix.js
 
 Now that you have a 5x5 LED matrix and 3 external LEDs, extend your favorite screensaver program to include the external LEDs into the changing pattern. Do something interesting. Commit the JavaScript file to your assignment repository, calling it twenty-eight.js. Build the circuit and take a short video of its operation.
 
-code: twenty-eight.js
+code: [twenty-eight.js](twenty-eight.js)
 
 
 
@@ -42,7 +42,7 @@ code: twenty-eight.js
 Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is pressed). Note: Do you need an external or internal pullup resistor? Commit the JavaScript file to your assignment repository, calling it digital-in.js. Build the circuit and take a short video of its operation.
 Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. Pick a GPIO pin, configure it as digital output, and wire VCC to it. Pick a GPIO pin, configure it as analog in, and wire SIG to it. GND whould be wired to ground on the micro:bit.
 
-code: https://github.com/Introduction-to-Computer-Engineering/final-project-assignment-7-week-12-este117/blob/master/digital-in.js
+code: 
 
 
 

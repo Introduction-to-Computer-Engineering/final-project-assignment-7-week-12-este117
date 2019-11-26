@@ -42,7 +42,7 @@ code: twenty-eight.js
 Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is pressed). Note: Do you need an external or internal pullup resistor? Commit the JavaScript file to your assignment repository, calling it digital-in.js. Build the circuit and take a short video of its operation.
 Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. Pick a GPIO pin, configure it as digital output, and wire VCC to it. Pick a GPIO pin, configure it as analog in, and wire SIG to it. GND whould be wired to ground on the micro:bit.
 
-code: digital-in.js
+code: https://github.com/Introduction-to-Computer-Engineering/final-project-assignment-7-week-12-este117/blob/master/digital-in.js
 
 
 

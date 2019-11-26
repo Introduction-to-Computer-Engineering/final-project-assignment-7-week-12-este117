@@ -17,7 +17,7 @@ Tutorial on creating a Makecode extension package for the soil moisture sensor. 
 
 Build the circuit, using 3 LEDs of different colors. Remember the proper orientation of the LEDs (long leg toward higher voltage). Commit the JavaScript file to your assignment repository, calling it original-guide.js. Build the circuit and take a short video of its operation.
 
-code: ./original-guide.js
+code: original-guide.js
 
 
 ## Part 2: enable-MATRIX

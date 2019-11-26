@@ -2,7 +2,7 @@
 
 ## Assignment: Final Project
 
-Part I (Week 12, Assignment #7)
+## Part I (Week 12, Assignment #7)
 
 1. Summary
 
@@ -12,7 +12,7 @@ An extended version of Assignment #6, requiring some basic I/O and pin operation
 Oscilloscope exercises and passing data over I2C.
 Tutorial on creating a Makecode extension package for the soil moisture sensor. The file criteria.md contains the criteria for passing.
 
-Part 1: Original LEDs
+## Part 1: Original LEDs
 
 
 Build the circuit, using 3 LEDs of different colors. Remember the proper orientation of the LEDs (long leg toward higher voltage). Commit the JavaScript file to your assignment repository, calling it original-guide.js. Build the circuit and take a short video of its operation.
@@ -20,14 +20,14 @@ Build the circuit, using 3 LEDs of different colors. Remember the proper orienta
 code: original-guide.js
 
 
-Part 2: enable-MATRIX
+## Part 2: enable-MATRIX
 
 Reconfigure the circuit and rewrite the program to avoid disabling the LED matrix. Choose the correct 3 pins from the micro:bit GPIO function table. Add code to demonstrate that the LED matrix is enabled. Commit the JavaScript file to your assignment repository, calling it enable-matrix.js. Build the circuit and take a short video of its operation.
 
 code: enable-matrix.js
 
 
-Part 3: twenty-eight
+## Part 3: twenty-eight
 
 
 Now that you have a 5x5 LED matrix and 3 external LEDs, extend your favorite screensaver program to include the external LEDs into the changing pattern. Do something interesting. Commit the JavaScript file to your assignment repository, calling it twenty-eight.js. Build the circuit and take a short video of its operation.
@@ -36,7 +36,7 @@ code: twenty-eight.js
 
 
 
-Part 4: digital-in (Soil sensor)
+## Part 4: digital-in (Soil sensor)
 
 
 Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is pressed). Note: Do you need an external or internal pullup resistor? Commit the JavaScript file to your assignment repository, calling it digital-in.js. Build the circuit and take a short video of its operation.
@@ -46,7 +46,7 @@ code: digital-in.js
 
 
 
-Part 5: manual- calibration
+## Part 5: manual- calibration
 
 
 
@@ -59,7 +59,7 @@ When it takes a sensor reading, it lights up as many rows of the LED matrix as c
 
 
 
-Part 6: auto-calibration
+## Part 6: auto-calibration
 
 Write a program that does the calibration programmatically:
 When the program starts, it prompts the user to take three readings of the low and three readings of the high values of the range. It starts by showing the South icon image to prompt the user to take a low value, and records it. Then, it shows the North icon image to prompt the user to take a high value, and records it. It repeats this two more times, for a total of 3 readings for each.

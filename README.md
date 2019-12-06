@@ -75,3 +75,7 @@ When the program starts, it prompts the user to take three readings of the low a
 It takes the average of the low values and sets the range minimum to that value. It does the same for the range maximum.
 It performs the mapping, exits the calibration subprogram, scrolls "Calibration success" once, and starts normal operation described in the previous task.
 Commit the JavaScript file to your assignment repository, calling it auto-calibration.js. Build the circuit and take a short video of its operation.
+
+code: [auto-calibration.js](auto-calibration.js)
+
+video: 

@@ -64,6 +64,8 @@ When it takes a sensor reading, it lights up as many rows of the LED matrix as c
 
 code: [manual-calibration.js](manual-calibration.js)
 
+video: [Manual-calibration.js](https://i.imgur.com/tqUsIdI.mp4)
+
 
 
 ## Part 6: auto-calibration

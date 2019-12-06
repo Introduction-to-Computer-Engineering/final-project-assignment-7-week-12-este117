@@ -78,4 +78,4 @@ Commit the JavaScript file to your assignment repository, calling it auto-calibr
 
 code: [auto-calibration.js](auto-calibration.js)
 
-video: 
+video: [Auto-calibration.js](https://i.imgur.com/bt0G9qh.mp4)

@@ -28,6 +28,8 @@ Reconfigure the circuit and rewrite the program to avoid disabling the LED matri
 
 code: [enable-matrix.js](enable-matrix.js)
 
+video: [Enable matrix.js](https://i.imgur.com/LytruEB.mp4)
+
 
 ## Part 3: twenty-eight
 

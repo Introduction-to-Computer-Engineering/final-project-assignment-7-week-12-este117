@@ -120,7 +120,6 @@ function readings() {
                 `)
         }
         if (calib == 6) {
-            basic.showString("Calibration Done")
             average()
         }
     }

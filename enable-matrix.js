@@ -37,6 +37,17 @@ class Light {
     }
 }
 basic.forever(function() {
+    led.plot(0, 0)
+    led.plot(0, 1)
+    led.plot(0, 2)
+    led.plot(0, 3)
+    led.plot(0, 4)
+    basic.pause(500)
+    led.unplot(0, 0)
+    led.unplot(0, 1)
+    led.unplot(0, 2)
+    led.unplot(0, 3)
+    led.unplot(0, 4)
     pins.analogWritePin(AnalogPin.P8, 0);
     pins.analogWritePin(AnalogPin.P12, 0);
     pins.analogWritePin(AnalogPin.P16, 0);

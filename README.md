@@ -38,7 +38,7 @@ Now that you have a 5x5 LED matrix and 3 external LEDs, extend your favorite scr
 
 code: [twenty-eight.js](twenty-eight.js)
 
-video: [Twenty-eight](https://i.imgur.com/xLSsiVj.mp4)
+video: [Twenty-eight.js](https://i.imgur.com/xLSsiVj.mp4)
 
 
 ## Part 4: digital-in (Soil sensor)
